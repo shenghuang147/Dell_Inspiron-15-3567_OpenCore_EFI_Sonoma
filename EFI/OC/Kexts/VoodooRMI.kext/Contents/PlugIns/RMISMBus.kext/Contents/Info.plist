@@ -7,25 +7,23 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
-	<string>VoodooI2CSynaptics</string>
+	<string>RMISMBus</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.alexandred.VoodooI2CSynaptics</string>
+	<string>com.1Revenger1.RMISMBus</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>VoodooI2CSynaptics</string>
+	<string>RMISMBus</string>
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
-	<key>CFBundleSpokenName</key>
-	<string></string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>1.0</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -44,39 +42,43 @@
 	<string>14E300c</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>VoodooI2CHIDDevice</key>
+		<key>RMISMBus</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>com.alexandred.VoodooI2CSynaptics</string>
+			<string>com.1Revenger1.RMISMBus</string>
 			<key>IOClass</key>
-			<string>VoodooI2CSynapticsDevice</string>
+			<string>RMISMBus</string>
 			<key>IOProbeScore</key>
-			<integer>400</integer>
+			<integer>500</integer>
 			<key>IOPropertyMatch</key>
 			<dict>
-				<key>name</key>
-				<string>SYNA2B33</string>
+				<key>VoodooSMBUS Slave Device Address</key>
+				<integer>44</integer>
 			</dict>
 			<key>IOProviderClass</key>
-			<string>VoodooI2CDeviceNub</string>
+			<string>VoodooSMBusDeviceNub</string>
 		</dict>
 	</dict>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.11</string>
+	<string>10.7</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2017 Alexandre Daoud. All rights reserved.</string>
+	<string>Copyright © 2021 1Revenger1. All rights reserved.</string>
 	<key>OSBundleLibraries</key>
 	<dict>
-		<key>com.alexandred.VoodooI2C</key>
-		<string>2.0</string>
+		<key>com.1Revenger1.VoodooRMI</key>
+		<string>1.0</string>
 		<key>com.apple.iokit.IOACPIFamily</key>
-		<string>1.4</string>
+		<string>1.0.0d1</string>
 		<key>com.apple.kpi.iokit</key>
-		<string>15.6</string>
+		<string>11</string>
 		<key>com.apple.kpi.libkern</key>
-		<string>15.6</string>
+		<string>11</string>
 		<key>com.apple.kpi.mach</key>
-		<string>15.6</string>
+		<string>11</string>
+		<key>de.leo-labs.VoodooSMBus</key>
+		<string>3.0</string>
 	</dict>
+	<key>OSBundleRequired</key>
+	<string>Console</string>
 </dict>
 </plist>
